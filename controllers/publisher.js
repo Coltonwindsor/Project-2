@@ -87,19 +87,6 @@ publisherRouter.delete('/:id', (req, res) => {
         })
 })
 
-publisherRouter.get('/byName/:name', (req, res) => {
-    const publisherName = req.params.name
-
-    publisherApi.getPublisherByName(publisherName)
-        .then((publishers) => {
-            res.json(publishers)
-        })
-        .catch((error) => {
-            console.log(error)
-            res.send(error)
-        })
-})
-
 
 module.exports = {
     publisherRouter
