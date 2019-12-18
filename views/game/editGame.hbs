@@ -1,15 +1,11 @@
-<form method="POST" action="<TODO: models url here (e.g: /accounts)>?_method=PUT">
+<h1>Edit Game</h1>
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  -->
-  <input type="text" value="{{<TODO: model.stringMember>}}" name="<TODO: stringMember (e.g: name)>" />
+<form method="POST" action="/game/{{game._id}}?_method=PUT">
 
-  <!--
-    Template for creating input form for a boolean object member
-  -->
-  <input type="checkbox" name="<TODO: booleanMember (e.g: isActive)>" value="true" {{#if <TODO: model.booleanMember (e.g: account.isActive)}}checked{{/if}} />
+  <input type="text" value="{{game.name}}" placeholder="name" name="name" />
+  <input type="number" value="{{game.releaseYear}}" placeholder="releaseYear" name="releaseYear" />
+  <input type="text" value="{{game.genre}}" placeholder="genre" name="genre" />
+  <input type="text" value="{{game.cover}}" placeholder="cover" name="cover" />
 
-  <input type="submit" value="Update Shop" />
+  <input type="submit" value="Save" />
 </form>
