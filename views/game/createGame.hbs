@@ -1,12 +1,11 @@
-<form method="POST" action="/<TODO: models url here (e.g: /accounts)>">
+<h1>Create Game</h1>
 
-  <!--
-    Template for creating input form for a string object key called stringMember
-    NOTE: for numeric input fields use `type="number"`
-  --->
-  <input type="text" value="{{<TODO: model.stringMember (e.g: account.name)}}" placeholder="name" name="<TODO: stringMember (e.g: name)>" />
+<form method="POST" action="/game/">
 
-  <input type="checkbox" name="<TODO: model.booleanMember (e.g: account.isActive)" value="true" />
+  <input type="text" value="" placeholder="name" name="name" />
+  <input type="number" value="" placeholder="releaseYear" name="releaseYear" />
+  <input type="text" value="" placeholder="genre" name="genre" />
+  <input type="text" value="" placeholder="cover" name="cover" />
 
-  <input type="submit" value="Create Shop" />
+  <input type="submit" value="Create Game" />
 </form>
