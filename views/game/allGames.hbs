@@ -6,13 +6,12 @@
 </a>
 
 
-{{#each allGames}}
 <ul>
-    <a href="/game/{{_id}}">
+    {{#each allGames}}
+    <a href="/game/{{_id}}">{{name}}
         <div>
-            <span>{{name}}</span>
-            <img src="{{cover}}" width="200">
+            <img src="{{cover}}" width="200px">
         </div>
     </a>
+    {{/each}}
 </ul>
-{{/each}}
