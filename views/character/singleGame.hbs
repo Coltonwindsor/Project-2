@@ -1,0 +1,18 @@
+<h1>{{game.name}}</h1>
+
+<img src="{{game.cover}}" width="200" />
+
+<h5>Release year: {{game.releaseYear}}</h5>
+<h5>Genre: {{game.genre}}</h5>
+
+<a href="/game/edit/{{game._id}}">
+    <button>Edit Game</button>
+</a>
+
+<form method="POST" action="/game/{{game._id}}?_method=DELETE">
+    <input type="submit" value="Delete" />
+</form>
+
+<a href="/game">
+    <button>Home</button>
+</a>
