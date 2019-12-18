@@ -6,7 +6,7 @@ const methodOverride = require('method-override')
 
 const { gameRouter } = require('./controllers/game.js')
 const { publisherRouter } = require('./controllers/publisher.js')
-
+const { characterRouter } = require('./controllers/character.js')
 
 app.use(express.urlencoded({ extended: true }))
 
@@ -26,6 +26,7 @@ app.set('view engine', 'hbs')
 
 app.use('/game', gameRouter)
 app.use('/publisher', publisherRouter)
+app.use('/character', characterRouter)
 
 const PORT = process.env.PORT || 3000
 
