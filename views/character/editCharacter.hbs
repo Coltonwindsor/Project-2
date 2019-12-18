@@ -1,11 +1,11 @@
-<h1>Edit Game</h1>
+<h1>Edit Character</h1>
 
-<form method="POST" action="/game/{{game._id}}?_method=PUT">
+<form method="POST" action="/character/{{character._id}}?_method=PUT">
 
-  <input type="text" value="{{game.name}}" placeholder="name" name="name" />
-  <input type="number" value="{{game.releaseYear}}" placeholder="releaseYear" name="releaseYear" />
-  <input type="text" value="{{game.genre}}" placeholder="genre" name="genre" />
-  <input type="text" value="{{game.cover}}" placeholder="cover" name="cover" />
+  <input type="text" value="{{character.name}}" placeholder="name" name="name" />
+  <input type="number" value="{{character.age}}" placeholder="age" name="age" />
+  <input type="text" value="{{character.description}}" placeholder="description" name="description" />
+  <input type="text" value="{{character.image}}" placeholder="link to image" name="image" />
 
   <input type="submit" value="Save" />
 </form>
