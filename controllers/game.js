@@ -1,50 +1,94 @@
-/* Step 1 import express
- *
- */
 const express = require('express')
 
-/* Step 2
- *
- * Import the api files from the models
- *
- * TODO: change the file path to the models file you'll need to use.
- * TODO: rename this from `templateApi` to something more sensible (e.g:
- * `shopsAPI`)
- *
- * NOTE: You may need to import more than one API to create the 
- * controller you need.
- * 
- */
-const templateApi = require('../models/template.js')
 
-/* Step 3 
- * 
- * Create a new router.
- *
- * the router will "contain" all the request handlers that you define in this file.
- * TODO: rename this from templateRouter to something that makes sense. (e.g:
- * `shopRouter`)
- */
-const templateRouter = express.Router()
+const gameApi = require('../models/game.js')
 
-/* Step 4
- * 
- * TODO: Put all request handlers here
- */
+const gameRouter = express.Router()
 
-/* Step 5
- *
- * TODO: delete this handler; it's just a sample
- */ 
-templateRouter.get('/', (req, res) => {
-  res.send(templateApi.getHelloWorldString())
+gameRouter.get('/', (req, res) => {
+  gameApi.getAllGames()
+    .then((allGames) => {
+      res.render('game/allGames', { allGames })
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
 })
 
-/* Step 6
- *
- * Export the router from the file.
- *
- */
+gameRouter.get('/new', (req, res) => {
+  res.render('game/createGame')
+})
+
+gameRouter.get('/edit/:id', (req, res) => {
+  const gameId = req.params.id
+
+  gameApi.getGameById(gameId)
+    .then((game) => {
+      res.render('game/editGame', { game })
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
+})
+
+gameRouter.get('/:id', (req, res) => {
+  const gameId = req.params.id
+
+  gameApi.getGameById(gameId)
+    .then((game) => {
+      res.render('game/singleGame', { game })
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
+})
+
+gameRouter.post('/', (req, res) => {
+  const newGame = req.body
+
+  gameApi.createGame(newGame)
+    .then(() => {
+      res.redirect('/game')
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
+
+})
+
+gameRouter.put('/:id', (req, res) => {
+  const gameId = req.params.id
+  const gameData = req.body
+
+  gameApi.updateGame(gameId, gameData)
+    .then(() => {
+      res.redirect(`/game/${gameId}`)
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
+})
+
+gameRouter.delete('/:id', (req, res) => {
+  const gameId = req.params.id
+
+  gameApi.deleteGame(gameId)
+    .then(() => {
+      res.redirect('/game')
+    })
+    .catch((error) => {
+      console.log(error)
+      res.send(error)
+    })
+})
+
+
+
 module.exports = {
-  templateRouter
+  gameRouter
 }
