@@ -1,0 +1,18 @@
+<h1>All Games</h1>
+
+
+<a href="/game/new">
+    <button>Create Game</button>
+</a>
+
+
+{{#each allGames}}
+<ul>
+    <a href="/game/{{_id}}">
+        <div>
+            <span>{{name}}</span>
+            <img src="{{cover}}" width="200">
+        </div>
+    </a>
+</ul>
+{{/each}}
