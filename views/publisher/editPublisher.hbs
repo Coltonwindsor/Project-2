@@ -1,11 +1,11 @@
-<h1>Edit Game</h1>
+<h1>Edit Game Publisher</h1>
 
-<form method="POST" action="/game/{{game._id}}?_method=PUT">
+<form method="POST" action="/publisher/{{publisher._id}}?_method=PUT">
 
-  <input type="text" value="{{game.name}}" placeholder="name" name="name" />
-  <input type="number" value="{{game.releaseYear}}" placeholder="releaseYear" name="releaseYear" />
-  <input type="text" value="{{game.genre}}" placeholder="genre" name="genre" />
-  <input type="text" value="{{game.cover}}" placeholder="cover" name="cover" />
+  <input type="text" value="{{publisher.name}}" placeholder="name" name="name" />
+  <input type="number" value="{{publisher.yearEstablished}}" placeholder="Year Established" name="yearEstablished" />
+  <input type="text" value="{{publisher.country}}" placeholder="country" name="country" />
+  <input type="text" value="{{publisher.logo}}" placeholder="link to logo" name="logo" />
 
   <input type="submit" value="Save" />
 </form>
