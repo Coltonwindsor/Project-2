@@ -1,15 +1,15 @@
-<h1>{{game.name}}</h1>
+<h1>{{publisher.name}}</h1>
 
-<img src="{{game.cover}}" width="200" />
+<img src="{{publisher.logo}}" width="200" />
 
-<h5>Release year: {{game.releaseYear}}</h5>
-<h5>Genre: {{game.genre}}</h5>
+<h5>Year Established: {{publisher.yearEstablished}}</h5>
+<h5>Country: {{publisher.country}}</h5>
 
-<a href="/game/edit/{{game._id}}">
-    <button>Edit Game</button>
+<a href="/publisher/edit/{{publisher._id}}">
+    <button>Edit Publisher</button>
 </a>
 
-<form method="POST" action="/game/{{game._id}}?_method=DELETE">
+<form method="POST" action="/publisher/{{publisher._id}}?_method=DELETE">
     <input type="submit" value="Delete" />
 </form>
 
