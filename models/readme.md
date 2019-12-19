@@ -1,8 +1,11 @@
-# models
+Video Game Database
 
-This directory is where your model files should go. 
+Link to Github: link to github repo goes here
 
-# Template Model File
+Link to App: heroku link goes here
 
-See the `./template.js` file for a template model file. Fell free to copy this 
-when creating a new model.
+Wire Frame: image goes here
+
+ERD: image goes here
+
+Trello: https://trello.com/b/DY6blQVZ/project-2-video-game-database
