@@ -23,7 +23,9 @@ app.use(express.static(__dirname + "/public"))
 app.set('view engine', 'hbs')
 
 
-
+app.get('/', (req, res) => {
+    res.redirect('/game')
+})
 app.use('/game', gameRouter)
 app.use('/publisher', publisherRouter)
 app.use('/character', characterRouter)
