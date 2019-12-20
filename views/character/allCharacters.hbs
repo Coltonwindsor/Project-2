@@ -1,18 +1,20 @@
-<h1>All Characters</h1>
+<div class="wrapper">
+    <h1>All Characters</h1>
 
-
-<a href="/character/new">
-    <button class="createCharacterBtn">Create Character</button>
-</a>
-<button class="gameBtn"><a href="/game">Games</a></button>
-<button class="publisherBtn"><a href="/publisher">Publishers</a></button>
-
-<ul>
-    {{#each allCharacters}}
-    <a href="/character/{{_id}}">{{name}}
-        <div>
-            <img src="{{image}}" width="200px">
-        </div>
-    </a>
-    {{/each}}
-</ul>
+    <div class="nav">
+        <a href="/character/new">
+            <button>Create Character</button>
+        </a>
+        <a href="/game"><button>Games</button></a>
+        <a href="/publisher"><button>Publishers</button></a>
+    </div>
+    <ul>
+        {{#each allCharacters}}
+        <a href="/character/{{_id}}">{{name}}
+            <div>
+                <img src="{{image}}" width="200px">
+            </div>
+        </a>
+        {{/each}}
+    </ul>
+</div>

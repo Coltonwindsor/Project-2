@@ -1,19 +1,21 @@
-<h1>All Video Game Publishers</h1>
+<div class="wrapper">
+    <h1>All Video Game Publishers</h1>
 
+    <div class="nav">
+        <a href="/publisher/new">
+            <button>Create Publisher</button>
+        </a>
+        <a href="/game"><button>Games</button></a>
+        <a href="/character"><button>Characters</button></a>
+    </div>
 
-<a href="/publisher/new">
-    <button>Create Publisher</button>
-</a>
-<button class="characterBtn"><a href="/character">Characters</a></button>
-<button class="gameBtn"><a href="/game">Games</a></button>
-
-
-<ul>
-    {{#each allPublishers}}
-    <a href="/publisher/{{_id}}">{{name}}
-        <div>
-            <img src="{{logo}}" width="200px">
-        </div>
-    </a>
-    {{/each}}
-</ul>
+    <ul>
+        {{#each allPublishers}}
+        <a href="/publisher/{{_id}}">{{name}}
+            <div>
+                <img src="{{logo}}" width="200px">
+            </div>
+        </a>
+        {{/each}}
+    </ul>
+</div>
