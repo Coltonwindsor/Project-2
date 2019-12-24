@@ -8,7 +8,8 @@
         <a href="/character"><button>Characters</button></a>
         <a href="/publisher"><button>Publishers</button></a>
     </div>
-    <ul>
+    <div class="list">
+
         {{#each allGames}}
         <a href="/game/{{_id}}">{{name}}
             <div>
@@ -16,5 +17,6 @@
             </div>
         </a>
         {{/each}}
-    </ul>
+
+    </div>
 </div>
