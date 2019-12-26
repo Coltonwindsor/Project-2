@@ -5,7 +5,8 @@ const PublisherSchema = new mongoose.Schema({
     name: String,
     yearEstablished: Number,
     country: String,
-    logo: String
+    logo: String,
+    description: String
 })
 
 const PublisherCollection = mongoose.model('publisher', PublisherSchema)

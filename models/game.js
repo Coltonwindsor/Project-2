@@ -4,7 +4,8 @@ const GameSchema = new mongoose.Schema({
   name: String,
   releaseYear: Number,
   genre: String,
-  cover: String
+  cover: String,
+  description: String
 })
 
 const GameCollection = mongoose.model('game', GameSchema)

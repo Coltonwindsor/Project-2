@@ -1,18 +1,21 @@
 <h1>{{character.name}}</h1>
-
-<img src="{{character.image}}" width="200" />
-
+<div class="image">
+    <img src="{{character.image}}" width="200" />
+</div>
 <h5>Age: {{character.age}}</h5>
-<h5>Description: {{character.description}}</h5>
+<h5>Description - </h5>
+<p>{{character.description}}</p>
 
-<a href="/character/edit/{{character._id}}">
-    <button>Edit Character</button>
-</a>
+<div class="nav">
+    <a href="/character/edit/{{character._id}}">
+        <button>Edit Character</button>
+    </a>
 
-<form method="POST" action="/character/{{character._id}}?_method=DELETE">
-    <input type="submit" value="Delete" />
-</form>
+    <form method="POST" action="/character/{{character._id}}?_method=DELETE">
+        <input type="submit" value="Delete" />
+    </form>
 
-<a href="/game">
-    <button>Home</button>
-</a>
+    <a href="/game">
+        <button>Home</button>
+    </a>
+</div>

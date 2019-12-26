@@ -1,18 +1,22 @@
 <h1>{{publisher.name}}</h1>
-
-<img src="{{publisher.logo}}" width="200" />
-
+<div class="image">
+    <img src="{{publisher.logo}}" width="200" />
+</div>
 <h5>Year Established: {{publisher.yearEstablished}}</h5>
 <h5>Country: {{publisher.country}}</h5>
+<h5>Description - </h5>
+<p>{{publisher.description}}</p>
 
-<a href="/publisher/edit/{{publisher._id}}">
-    <button>Edit Publisher</button>
-</a>
+<div class="nav">
+    <a href="/publisher/edit/{{publisher._id}}">
+        <button>Edit Publisher</button>
+    </a>
 
-<form method="POST" action="/publisher/{{publisher._id}}?_method=DELETE">
-    <input type="submit" value="Delete" />
-</form>
+    <form method="POST" action="/publisher/{{publisher._id}}?_method=DELETE">
+        <input type="submit" value="Delete" />
+    </form>
 
-<a href="/game">
-    <button>Home</button>
-</a>
+    <a href="/game">
+        <button>Home</button>
+    </a>
+</div>
