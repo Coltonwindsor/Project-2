@@ -25,6 +25,19 @@ a {
   padding-bottom: 20px;
 }
 
+.descriptionBox {
+  width: 300px;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: space-evenly;
+}
+.save {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
 form input[type="submit"],
 button {
   box-shadow: inset 0px 1px 3px 0px #91b8b3;
@@ -67,6 +80,7 @@ h5 {
   color: whitesmoke;
   font-size: 20px;
 }
+
 p {
   text-align: center;
   font-size: 16px;

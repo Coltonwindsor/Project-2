@@ -1,11 +1,13 @@
 <h1>Create Character</h1>
 
 <form method="POST" action="/character/">
-
-  <input type="text" value="" placeholder="name" name="name" />
-  <input type="number" value="" placeholder="age" name="age" />
-  <input type="text" value="" placeholder="description" name="description" />
-  <input type="text" value="" placeholder="image" name="image" />
-
-  <input type="submit" value="Create Character" />
+  <div class="inputBox">
+    <input type="text" value="" placeholder="name" name="name" />
+    <input type="number" value="" placeholder="age" name="age" />
+    <input class="descriptionBox" type="text" value="" placeholder="description" name="description" />
+    <input type="text" value="" placeholder="image" name="image" />
+  </div>
+  <div class="save">
+    <input type="submit" value="Create Character" />
+  </div>
 </form>

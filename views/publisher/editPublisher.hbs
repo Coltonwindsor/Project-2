@@ -1,12 +1,15 @@
 <h1>Edit Game Publisher</h1>
 
 <form method="POST" action="/publisher/{{publisher._id}}?_method=PUT">
-
-  <input type="text" value="{{publisher.name}}" placeholder="name" name="name" />
-  <input type="number" value="{{publisher.yearEstablished}}" placeholder="Year Established" name="yearEstablished" />
-  <input type="text" value="{{publisher.country}}" placeholder="country" name="country" />
-  <input type="text" value="{{publisher.logo}}" placeholder="link to logo" name="logo" />
-  <input type="text" value="{{publisher.description}}" placeholder="description" name="description" />
-
-  <input type="submit" value="Save" />
+  <div class="inputBox">
+    <input type="text" value="{{publisher.name}}" placeholder="name" name="name" />
+    <input type="number" value="{{publisher.yearEstablished}}" placeholder="Year Established" name="yearEstablished" />
+    <input type="text" value="{{publisher.country}}" placeholder="country" name="country" />
+    <input type="text" value="{{publisher.logo}}" placeholder="link to logo" name="logo" />
+    <input class="descriptionBox" type="text" value="{{publisher.description}}" placeholder="description"
+      name="description" />
+  </div>
+  <div class="save">
+    <input type="submit" value="Save" />
+  </div>
 </form>

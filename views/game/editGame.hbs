@@ -1,12 +1,16 @@
 <h1>Edit Game</h1>
 
 <form method="POST" action="/game/{{game._id}}?_method=PUT">
+  <div class="inputBox">
+    <input type="text" value="{{game.name}}" placeholder="name" name="name" />
+    <input type="number" value="{{game.releaseYear}}" placeholder="releaseYear" name="releaseYear" />
+    <input type="text" value="{{game.genre}}" placeholder="genre" name="genre" />
+    <input type="text" value="{{game.cover}}" placeholder="cover" name="cover" />
+    <input class="descriptionBox" type="text" value="{{game.description}}" placeholder="description"
+      name="description" />
+  </div>
+  <div class="save">
+    <input type="submit" value="Save" />
+  </div>
 
-  <input type="text" value="{{game.name}}" placeholder="name" name="name" />
-  <input type="number" value="{{game.releaseYear}}" placeholder="releaseYear" name="releaseYear" />
-  <input type="text" value="{{game.genre}}" placeholder="genre" name="genre" />
-  <input type="text" value="{{game.cover}}" placeholder="cover" name="cover" />
-  <input type="text" value="{{game.description}}" placeholder="description" name="description" />
-
-  <input type="submit" value="Save" />
 </form>

@@ -1,12 +1,14 @@
 <h1>Create Publisher</h1>
 
 <form method="POST" action="/publisher/">
-
-  <input type="text" value="" placeholder="name" name="name" />
-  <input type="number" value="" placeholder="Year Established" name="yearEstablished" />
-  <input type="text" value="" placeholder="country" name="country" />
-  <input type="text" value="" placeholder="link to logo" name="logo" />
-  <input type="text" value="" placeholder="description" name="description" />
-
-  <input type="submit" value="Create Publisher" />
+  <div class="inputBox">
+    <input type="text" value="" placeholder="name" name="name" />
+    <input type="number" value="" placeholder="Year Established" name="yearEstablished" />
+    <input type="text" value="" placeholder="country" name="country" />
+    <input type="text" value="" placeholder="link to logo" name="logo" />
+    <input class="descriptionBox" type="text" value="" placeholder="description" name="description" />
+  </div>
+  <div class="save">
+    <input type="submit" value="Create Publisher" />
+  </div>
 </form>
